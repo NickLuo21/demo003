@@ -21,6 +21,7 @@
       <outputDirectory>conf</outputDirectory>
       <excludes>
         <exclude>VAADIN/**</exclude>
+        <exclude>assembly.xml</exclude>
       </excludes>
     </fileSet>
     <fileSet>

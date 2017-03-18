@@ -118,10 +118,6 @@
 										<extraArguments>
 											<extraArgument>-Xms512m</extraArgument>
 											<extraArgument>-Xmx2048m</extraArgument>
-											<!--<extraArgument>-Dcom.sun.management.jmxremote</extraArgument>
-                                            <extraArgument>-Dcom.sun.management.jmxremote.ssl=false</extraArgument>
-                                            <extraArgument>-Dcom.sun.management.jmxremote.authenticate=false</extraArgument>
-                                            <extraArgument>-Dcom.sun.management.jmxremote.port=1098</extraArgument>-->
 										</extraArguments>
 									</jvmSettings>
 									<generatorConfigurations>
