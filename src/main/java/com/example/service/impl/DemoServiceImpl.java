@@ -3,7 +3,8 @@ package com.example.service.impl;
 import com.example.dao.DemoDao;
 import com.example.model.DemoEntity;
 import com.example.service.DemoService;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,8 +15,9 @@ import java.util.List;
  */
 @Component("demoService")
 @Transactional
-@Slf4j
 public class DemoServiceImpl implements DemoService {
+
+    private static Logger logger = LoggerFactory.getLogger(DemoServiceImpl.class);
 
     // also can use Autowired annotation
     private final DemoDao demoDao;
@@ -27,7 +29,7 @@ public class DemoServiceImpl implements DemoService {
     @Override
     public List<DemoEntity> getAllEntities() {
         List<DemoEntity> entities = demoDao.findAllEntities();
-        log.info("find entity count = {}", entities.size());
+        logger.info("find entity count = {}", entities.size());
         return entities;
     }
 

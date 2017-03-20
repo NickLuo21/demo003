@@ -1,7 +1,5 @@
 package com.example.model;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,7 +9,6 @@ import java.io.Serializable;
 @Entity
 @NamedQuery(name="DemoEntity.findAllEntities", query="SELECT e FROM DemoEntity e")
 @Table(name = "DemoEntity")
-@Data
 public class DemoEntity implements Serializable{
     @Id
     @Column(name = "ENTITY_ID")
@@ -23,4 +20,27 @@ public class DemoEntity implements Serializable{
     @Column(name = "ENTITY_COMMENT")
     private String comment;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }
